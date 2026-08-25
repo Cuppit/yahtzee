@@ -116,9 +116,9 @@ func update_options(dice_vals):
 	var cats = categories_available.keys()
 	for cat in range(0,len(cats)):
 		score = 0
-		if categories_available.keys()[cat] == "aces":
+		if categories_available.keys()[cat] in ["aces","twos","threes","fours","fives","sixes"]:
 			for val in dice_vals:
-				if val == 1:
+				if val == cat+1:
 					score += val
 			print("About to write to the object")
 			score_buttons[cat].text = str(score)
