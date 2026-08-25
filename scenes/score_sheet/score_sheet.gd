@@ -100,7 +100,18 @@ var score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fou
 # TODO 20260824: FINISH update_options() FUNCTION
 # Decide optimal procedure (generate scores for this point in the game first,
 # THEN assign labels?  or assign the labels immediately?
-func update_options(dice_vals:Array[int]):
+func update_options(dice_vals):
+
+	# Grab the UI buttons again, since they might have been nil when they were 
+	# grabbed at scene startup
+	score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
+			btn_score_fives,btn_score_sixes,btn_three_of_a_kind,btn_four_of_a_kind,btn_full_house,
+			btn_small_straight,btn_large_straight,btn_yahtzee,btn_chance,btn_yahtzee_bonus]
+
+	score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fours,
+			lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
+			lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
+
 	var score = 0
 	var cats = categories_available.keys()
 	for cat in range(0,len(cats)):
@@ -109,4 +120,5 @@ func update_options(dice_vals:Array[int]):
 			for val in dice_vals:
 				if val == 1:
 					score += val
+			print("About to write to the object")
 			score_buttons[cat].text = str(score)
