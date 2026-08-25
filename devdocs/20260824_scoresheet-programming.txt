@@ -1,0 +1,24 @@
+--YESTERDAY--
+
+Some UI scoresheet tinkering
+
+--TODAY--
+
+changed it so clicking on a die indicates which ones you want to KEEP, *NOT*
+which ones you want to REROLL
+
+--GOAL FOR TODAY--
+
+Implement the following process flow:
+	-player rolls dice
+	-gamescreen gets the result
+	-gamescreen shares result with scoresheet
+	-scoresheet takes result, and fills in all the boxes with what the score
+	 will be if the player chooses to score their current roll in that box
+	
+
+--STILL IMPLEMENTING SCORE UPDATE--
+
+TODO TOMORROW:
+	
+	-FINISH UPDATING SCORE

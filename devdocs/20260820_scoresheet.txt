@@ -1,0 +1,26 @@
+LAST TIME'S ACCOMPLISHMENTS
+
+Have a working prototype for the "dice" UI component
+	-Selecting individual dice works as toggle buttons
+	-The "Die" class stores the die's value, and displays
+	 the appropriate sprite from the "SpriteFrames" resource
+	 created for it
+	
+	
+TODAY'S WORK: IMPLEMENT A SCORE SHEET
+using UI components
+
+
+...
+
+PROBLEM: Ignorance of how UI works.  
+
+SOLUTION: Reading the manual was very enlightening, but cost a lot of time
+to research/find the right components to use:
+https://docs.godotengine.org/en/stable/tutorials/ui/gui_containers.html#container-layout
+
+TO ACHIEVE THE DESIRED EFFECT: The UI will present an organized, rigid set of 
+tabular cells similar to the traditional Yahtzee score sheet.  
+
+IMPLEMENTATION: MarginContainers, with margins set in Theme Overrides,
+and labels within them set to "autowrap".  

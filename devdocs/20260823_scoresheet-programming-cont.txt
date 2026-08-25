@@ -1,0 +1,32 @@
+13:00 CDT -- START
+
+--- LAST TIME ---
+
+Finished framework of the scoresheet
+
+--- TODAY ---
+
+Coding functionality
+
+PROBLEM
+	-The way this was structured was:
+		-MAINGAME UI
+			-dice UI
+			-Scoresheet UI
+	
+	Functionality of the scoresheet is dependent on the state of the dice UI,
+	which means it needs access to the state of the dice UI.
+	
+	Q: BEST WAY TO GET THAT INFO?
+	A: 		-Game screen starts up
+			-Game screen gives the score sheet reference to the dice UI object
+			-Game screen gives the dice UI object reference to the score sheet
+			
+			-Game screen initializes the game:
+				-Gamescreen reroll bank resets to 2
+				-scoresheet resets scores
+				-dice UI makes the initial role
+
+
+GAME START BUTTON PRESSED
+	-INITIAL GAME STATE IS SET UP

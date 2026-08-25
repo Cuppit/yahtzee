@@ -1,0 +1,5 @@
+OBJECTIVE: throw together a yahtzee simulator
+
+SCREEN
+
+dice

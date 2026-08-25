@@ -1,0 +1,25 @@
+08:10 CDT -- START
+
+--LAST TIME--
+	-Complete draft of the scene structure for the scoresheet is
+	 completed ("That's a lotta nodes!")
+	
+--TODAY'S WORK--
+	-Script the actual scoresheet scene
+
+With the scoresheet assembled, now the coding starts.
+
+--PLANNED IMPLEMENTATION--
+It may have not been mentioned before, but the intended function is as follows:
+	-When a player moves the mouse over a button, the button's text changes
+	 to what the score will be when the player chooses to fill that box.
+	
+	-Clicking the button fills it in, disables the button, and starts the next
+	 round.
+	
+	
+	08:29 CDT -- Need to step away.  When come back:
+		-Finish @onready var declarations for the Lower Section score buttons
+		 and labels
+
+[was finished by end of day]

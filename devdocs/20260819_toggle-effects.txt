@@ -1,0 +1,2 @@
+The intention today is simply to make a highlight "aura" appear around the die
+when it's selected for rerolling.

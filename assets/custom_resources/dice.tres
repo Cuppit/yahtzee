@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://le6g6er6o48m"]
+
+[ext_resource type="Texture2D" uid="uid://b0kn8wv6f40xc" path="res://assets/sprites/dice/die1.png" id="1_ml55u"]
+[ext_resource type="Texture2D" uid="uid://crc7u3ctjvsyq" path="res://assets/sprites/dice/die2.png" id="2_kpw0d"]
+[ext_resource type="Texture2D" uid="uid://cv48bor76sbui" path="res://assets/sprites/dice/die3.png" id="3_dpf0l"]
+[ext_resource type="Texture2D" uid="uid://cf203rle6oxko" path="res://assets/sprites/dice/die4.png" id="4_0lxqc"]
+[ext_resource type="Texture2D" uid="uid://c7pwnea4unnmn" path="res://assets/sprites/dice/die5.png" id="5_ah2mw"]
+[ext_resource type="Texture2D" uid="uid://bnehnvfse5khv" path="res://assets/sprites/dice/die6.png" id="6_75glm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ml55u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kpw0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dpf0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0lxqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ah2mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_75glm")
+}],
+"loop": 1,
+"name": &"dice",
+"speed": 5.0
+}]

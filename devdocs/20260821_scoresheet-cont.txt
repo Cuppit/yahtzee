@@ -1,0 +1,42 @@
+LAST TIME: wanted to make the score sheet
+Still in design phase?
+
+
+----
+
+INTERACTION DESIGN
+
+The scoresheet is what the player is interacting with the majority of the time.
+
+DESIGN POINT: 
+	-Should each row be it's own entire class?
+		-IF YES: smaller scripts (but more of them)
+		-IF NO: Scoresheet script much bigger (but one unified object)
+		
+	-Is the actual game data stored within the scoresheet object itself?
+		-IF YES: Need way for scoresheet to report details to other objects
+		
+	--- GAMEPLAY LOOP: USER EXPERIENCE ---
+	
+	-Game opens up with the initial roll
+		-Rerolls meter indicates 2 rerolls left available
+		-SCORESHEET
+			-The score slots themselves are buttons?
+			
+			
+IMPLEMENTATION
+	-Each row will have a button and a label in the score spot.  Clicking on a
+	 button:
+		-Scores the current roll in that category
+		-disables the button
+		-overwrites the associated label with the score that was made
+		-updates the player's total score display
+		-ENDS THE ROUND, starts the next one
+
+There's a ton of UI and sound bells and whistles to tack on in the future.
+For now, simply implementing the game as stated is the goal by the end of the
+day.
+
+CRITICAL REMINDER: FINISH THE UI NODE STRUCTURE **BEFORE** SCRIPTING ANY CODE.
+It becomes very difficult to change the structure after coding has begun.
+Of particular importance is the naming convention of each component of the UI.

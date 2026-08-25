@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dou0r4dvoccua"]
+
+[ext_resource type="Script" uid="uid://deiuhtm3ggecj" path="res://scenes/game_screen/game_screen.gd" id="1_5dyew"]
+[ext_resource type="PackedScene" uid="uid://8v2c77gyhlnq" path="res://scenes/dice/dice.tscn" id="2_4hxb2"]
+[ext_resource type="PackedScene" uid="uid://dgsd1dk4wvb6x" path="res://scenes/score_sheet/score_sheet.tscn" id="3_4hxb2"]
+
+[node name="GameScreen" type="Control" unique_id=2050456348]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5dyew")
+
+[node name="Dice" parent="." unique_id=930568623 instance=ExtResource("2_4hxb2")]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 536.0
+offset_right = 376.0
+offset_bottom = 600.0
+
+[node name="btnRoll" type="Button" parent="." unique_id=1933243868]
+visible = false
+layout_mode = 0
+offset_left = 121.0
+offset_top = 482.0
+offset_right = 266.0
+offset_bottom = 513.0
+text = "Roll!"
+
+[node name="ScoreSheet" parent="." unique_id=1401567757 instance=ExtResource("3_4hxb2")]
+layout_mode = 1
+offset_left = 400.0
+offset_top = -4.0
+offset_right = 1150.0
+offset_bottom = -4.0
+
+[node name="lblRerollMeter" type="Label" parent="." unique_id=1239326114]
+visible = false
+layout_mode = 0
+offset_left = 97.0
+offset_top = 101.0
+offset_right = 316.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 28
+text = "REROLLS LEFT: 2"
+text_direction = 2
+
+[node name="btnGameStart" type="Button" parent="." unique_id=380531846]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 297.0
+offset_right = 244.0
+offset_bottom = 328.0
+text = "Start Game"
+
+[node name="lblNoDiceSelected" type="Label" parent="." unique_id=600902726]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = 378.0
+offset_right = 325.0
+offset_bottom = 453.0
+text = "NO DICE TO ROLL!
+Un-select one or more dice to reroll them!
+v--v--v--v--v--v--v"
+
+[node name="tmrNoDiceSelectedMsgTimeout" type="Timer" parent="." unique_id=1772451571]
+
+[node name="lblNoRerollsLeft" type="Label" parent="." unique_id=879785770]
+visible = false
+layout_mode = 0
+offset_left = 196.0
+offset_top = 157.0
+offset_right = 353.0
+offset_bottom = 258.0
+text = "NO REROLLS LEFT 
+THIS ROUND!  Select
+a category to score 
+this roll in: ---------->"
+
+[node name="tmrNoRerollsLeft" type="Timer" parent="." unique_id=1963019627]
+
+[node name="lblKeepDice" type="Label" parent="." unique_id=1901873635]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 422.0
+offset_right = 190.0
+offset_bottom = 523.0
+text = "Click on a die to keep it;
+unselected 
+dice will be 
+re-rolled"
+
+[connection signal="pressed" from="btnRoll" to="." method="_on_roll_pressed"]
+[connection signal="pressed" from="btnGameStart" to="." method="_on_btn_game_start_pressed"]
+[connection signal="timeout" from="tmrNoDiceSelectedMsgTimeout" to="." method="_on_tmr_no_dice_selected_msg_timeout_timeout"]
+[connection signal="timeout" from="tmrNoRerollsLeft" to="." method="_on_tmr_no_rerolls_left_timeout"]

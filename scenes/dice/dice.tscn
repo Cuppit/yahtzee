@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://8v2c77gyhlnq"]
+
+[ext_resource type="PackedScene" uid="uid://x6noc2y4dq13" path="res://scenes/die/die.tscn" id="1_4fys5"]
+[ext_resource type="Script" uid="uid://dpf0vym1xjj2k" path="res://scenes/dice/dice.gd" id="1_fvt51"]
+
+[node name="Dice" type="GridContainer" unique_id=930568623]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 4
+columns = 5
+script = ExtResource("1_fvt51")
+
+[node name="Die" parent="." unique_id=949753758 instance=ExtResource("1_4fys5")]
+layout_mode = 2
+
+[node name="Die2" parent="." unique_id=1127399680 instance=ExtResource("1_4fys5")]
+layout_mode = 2
+
+[node name="Die3" parent="." unique_id=1445175224 instance=ExtResource("1_4fys5")]
+layout_mode = 2
+
+[node name="Die4" parent="." unique_id=346244191 instance=ExtResource("1_4fys5")]
+layout_mode = 2
+
+[node name="Die5" parent="." unique_id=140210658 instance=ExtResource("1_4fys5")]
+layout_mode = 2
