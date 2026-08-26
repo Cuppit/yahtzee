@@ -96,6 +96,46 @@ var score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fou
 		lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
 		lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
 
+
+func is_full_house(dice_vals):
+	var uniq = {}
+	for val in dice_vals: 
+		if uniq.has(val):
+			uniq[val] += 1
+		else:
+			uniq[val] = 1
+	var to_test = uniq.values()
+	to_test.sort()
+	return to_test == [2,3]
+	
+
+# Determines the point value of a set of dice in the specified category
+# dice_vals: the array of values of the dice
+# cat: the named category to determine the score for
+func get_score(dice_vals, cat):
+	var score = 0
+	if cat in ["aces","twos","threes","fours","fives","sixes"]:
+		for val in dice_vals:
+			if val == categories_available.keys().find(cat)+1:
+				score += val
+	elif cat in ["three_of_a_kind","four_of_a_kind", "chance"]:
+		for val in dice_vals:
+			score += val
+	elif cat == "full_house":
+		score = 25 if is_full_house(dice_vals) else 0	
+	elif cat == "sm_straight":
+		pass
+	elif cat == "lg_straight":
+		pass
+	elif cat == "yahtzee":
+		var is_a_yahtzee = true
+		for val in dice_vals:
+			if val != dice_vals[0]:
+				is_a_yahtzee = false
+		score = 50 if is_a_yahtzee else 0
+
+	return score
+
 # Updates score values portrayed on the 
 # TODO 20260824: FINISH update_options() FUNCTION
 # Decide optimal procedure (generate scores for this point in the game first,
@@ -116,9 +156,16 @@ func update_options(dice_vals):
 	var cats = categories_available.keys()
 	for cat in range(0,len(cats)):
 		score = 0
-		if categories_available.keys()[cat] in ["aces","twos","threes","fours","fives","sixes"]:
+		if cats[cat] in ["aces","twos","threes","fours","fives","sixes"]:
 			for val in dice_vals:
 				if val == cat+1:
 					score += val
 			print("About to write to the object")
-			score_buttons[cat].text = str(score)
+		elif cats[cat] in ["three_of_a_kind","four_of_a_kind"]:
+			for val in dice_vals:
+				score += val
+		elif cats[cat] == "full_house":
+			score = 25 if is_full_house(dice_vals) else 0
+			
+		if categories_available[cats[cat]]:
+			score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))

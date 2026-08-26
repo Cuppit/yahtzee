@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://deiuhtm3ggecj" path="res://scenes/game_screen/game_screen.gd" id="1_5dyew"]
 [ext_resource type="PackedScene" uid="uid://8v2c77gyhlnq" path="res://scenes/dice/dice.tscn" id="2_4hxb2"]
 [ext_resource type="PackedScene" uid="uid://dgsd1dk4wvb6x" path="res://scenes/score_sheet/score_sheet.tscn" id="3_4hxb2"]
+[ext_resource type="Theme" uid="uid://b3kq74llqlv3x" path="res://assets/themes/minimal/MinimalUI.tres" id="4_3o8ta"]
 
 [node name="GameScreen" type="Control" unique_id=2050456348]
 layout_mode = 3
@@ -95,7 +96,17 @@ unselected
 dice will be 
 re-rolled"
 
+[node name="btnDebugSetFullHouse" type="Button" parent="." unique_id=1352130837]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 53.0
+offset_right = 289.0
+offset_bottom = 84.0
+theme = ExtResource("4_3o8ta")
+text = "[DEBUG] Set dice to Full House"
+
 [connection signal="pressed" from="btnRoll" to="." method="_on_roll_pressed"]
 [connection signal="pressed" from="btnGameStart" to="." method="_on_btn_game_start_pressed"]
 [connection signal="timeout" from="tmrNoDiceSelectedMsgTimeout" to="." method="_on_tmr_no_dice_selected_msg_timeout_timeout"]
 [connection signal="timeout" from="tmrNoRerollsLeft" to="." method="_on_tmr_no_rerolls_left_timeout"]
+[connection signal="pressed" from="btnDebugSetFullHouse" to="." method="_on_btn_debug_set_full_house_pressed"]

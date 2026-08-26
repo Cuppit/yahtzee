@@ -44,6 +44,7 @@ func _on_roll_pressed():
 
 func _on_btn_game_start_pressed():
 	dice.roll_all()
+	score_sheet.update_options(dice.get_current_roll())
 	# Reset the score sheet
 	# TODO 20260823: If it becomes necessary, write a function to reset the 
 	# initial state of the score sheet.
@@ -62,3 +63,8 @@ func _on_tmr_no_dice_selected_msg_timeout_timeout():
 
 func _on_tmr_no_rerolls_left_timeout():
 	lbl_no_rerolls_left.visible = false
+
+
+func _on_btn_debug_set_full_house_pressed():
+	dice.debug_set_dice("yahtzee")
+	score_sheet.update_options(dice.get_current_roll())

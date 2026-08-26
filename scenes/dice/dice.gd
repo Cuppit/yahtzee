@@ -10,6 +10,22 @@ func get_current_roll():
 	
 	return vals
 
+# Debug value manually sets the dice to a full house
+func debug_set_dice(to_set):
+	if to_set == "full_house":
+		var first_three = 3
+		for child in get_children():
+			if child is Die:
+				if first_three > 0:
+					child.value = 1
+					first_three -= 1
+				else:
+					child.value = 2
+	elif to_set == "yahtzee":
+		for child in get_children():
+			if child is Die:
+				child.value=6
+	
 
 # Identifies which dice are currently pressed (indicating they're "selected"),
 # rolls them, and returns true.  
