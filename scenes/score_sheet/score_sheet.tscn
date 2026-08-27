@@ -52,7 +52,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Title" unique_id=763930351]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Title" unique_id=763930351]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "ACE"
@@ -66,7 +66,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Desc" unique_id=1726094930]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Desc" unique_id=1726094930]
 layout_mode = 2
 text = "Sum of all aces (ones)"
 horizontal_alignment = 1
@@ -79,10 +79,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=1801745082]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=1801745082]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=122571770]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=122571770]
 layout_mode = 2
 
 [node name="Twos" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=1604996790]
@@ -95,7 +95,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Title" unique_id=1493761719]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Title" unique_id=1493761719]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "TWOS"
@@ -109,7 +109,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Desc" unique_id=622900740]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Desc" unique_id=622900740]
 layout_mode = 2
 text = "Sum of all twos"
 horizontal_alignment = 1
@@ -122,10 +122,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=1929632169]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=1929632169]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=967926282]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=967926282]
 layout_mode = 2
 
 [node name="Threes" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=407151612]
@@ -138,7 +138,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblThreesTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Title" unique_id=483836349]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Title" unique_id=483836349]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "THREES"
@@ -152,7 +152,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Desc" unique_id=356077884]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Desc" unique_id=356077884]
 layout_mode = 2
 text = "Sum of all threes"
 horizontal_alignment = 1
@@ -165,10 +165,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=371836186]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=371836186]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=227657041]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=227657041]
 layout_mode = 2
 
 [node name="Fours" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=1230900014]
@@ -181,7 +181,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Title" unique_id=1053800936]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Title" unique_id=1053800936]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "FOURS"
@@ -195,7 +195,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Desc" unique_id=1073992225]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Desc" unique_id=1073992225]
 layout_mode = 2
 text = "Sum of all fours"
 horizontal_alignment = 1
@@ -208,10 +208,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=2019232443]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=2019232443]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=995262895]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=995262895]
 layout_mode = 2
 
 [node name="Fives" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=126488508]
@@ -238,7 +238,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Desc" unique_id=1165603006]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Desc" unique_id=1165603006]
 layout_mode = 2
 text = "Sum of all fives"
 horizontal_alignment = 1
@@ -251,10 +251,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnFivesScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=858801354]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=858801354]
 layout_mode = 2
 
-[node name="lblFivesScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=552185425]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=552185425]
 layout_mode = 2
 
 [node name="Sixes" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=816874080]
@@ -267,7 +267,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Title" unique_id=946706274]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Title" unique_id=946706274]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "SIXES"
@@ -281,7 +281,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Desc" unique_id=2077346611]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Desc" unique_id=2077346611]
 layout_mode = 2
 text = "Sum of all sixes"
 horizontal_alignment = 1
@@ -294,10 +294,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=191201934]
+[node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=191201934]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=287992446]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=287992446]
 layout_mode = 2
 
 [node name="UpperSubtotal" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/UpperSection" unique_id=674353893]
@@ -396,7 +396,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblUpperTotalTitle" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/UpperTotal/Title" unique_id=1444951814]
+[node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/UpperTotal/Title" unique_id=1444951814]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "TOTAL (UPPER)"
@@ -470,7 +470,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblThreeOfAKindDesc" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindDesc" unique_id=619846167]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindDesc" unique_id=619846167]
 layout_mode = 2
 text = "Add Total of All Dice"
 horizontal_alignment = 1
@@ -483,10 +483,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnThreeOfAKind" type="Button" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1396495007]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1396495007]
 layout_mode = 2
 
-[node name="lblThreeOfAKind" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1437037853]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1437037853]
 layout_mode = 2
 
 [node name="FourOfAKind" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=583851079]
@@ -499,7 +499,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Title" unique_id=1896300500]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Title" unique_id=1896300500]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "4 OF A KIND"
@@ -513,7 +513,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Desc" unique_id=1185071134]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Desc" unique_id=1185071134]
 layout_mode = 2
 text = "Add Total of All Dice"
 horizontal_alignment = 1
@@ -526,10 +526,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=603908122]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=603908122]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=442493455]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=442493455]
 layout_mode = 2
 
 [node name="FullHouse" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1761832712]
@@ -542,7 +542,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Title" unique_id=244666592]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Title" unique_id=244666592]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "FULL HOUSE"
@@ -556,7 +556,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Desc" unique_id=341139916]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Desc" unique_id=341139916]
 layout_mode = 2
 text = "SCORE 
 25"
@@ -571,10 +571,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=99480190]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=99480190]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=514232839]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=514232839]
 layout_mode = 2
 
 [node name="SmallStraight" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1355392180]
@@ -587,7 +587,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Title" unique_id=996065621]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Title" unique_id=996065621]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "SMALL STRAIGHT"
@@ -601,7 +601,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Desc" unique_id=740878902]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Desc" unique_id=740878902]
 layout_mode = 2
 text = "SCORE 
 30"
@@ -616,10 +616,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1715680047]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1715680047]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1893930602]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1893930602]
 layout_mode = 2
 
 [node name="LargeStraight" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1553973345]
@@ -632,7 +632,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Title" unique_id=160582400]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Title" unique_id=160582400]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "LARGE STRAIGHT"
@@ -646,7 +646,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Desc" unique_id=74510381]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Desc" unique_id=74510381]
 layout_mode = 2
 text = "SCORE 
 40"
@@ -661,10 +661,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1784706040]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1784706040]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1879776798]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1879776798]
 layout_mode = 2
 
 [node name="Yahtzee" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1861075793]
@@ -677,7 +677,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Title" unique_id=996050717]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Title" unique_id=996050717]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "YAHTZEE"
@@ -691,7 +691,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Desc" unique_id=1218667175]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Desc" unique_id=1218667175]
 layout_mode = 2
 text = "SCORE 
 50"
@@ -706,10 +706,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1173662197]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1173662197]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1141558746]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1141558746]
 layout_mode = 2
 
 [node name="Chance" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=14345458]
@@ -749,10 +749,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=811148499]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=811148499]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=1051971655]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=1051971655]
 layout_mode = 2
 
 [node name="YahtzeeBonus" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=951860428]
@@ -765,7 +765,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblTitle" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Title" unique_id=1429073537]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Title" unique_id=1429073537]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "YAHTZEE BONUS"
@@ -779,7 +779,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Desc" unique_id=37492931]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Desc" unique_id=37492931]
 layout_mode = 2
 text = "✓ FOR EACH BONUS: 100 PTS PER ✓"
 horizontal_alignment = 1
@@ -793,10 +793,10 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="btnScore" type="Button" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1963450152]
+[node name="btn" type="Button" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1963450152]
 layout_mode = 2
 
-[node name="lblScore" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1347597137]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1347597137]
 layout_mode = 2
 
 [node name="LowerSectionTotal" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1527171937]
@@ -927,3 +927,6 @@ layout_mode = 2
 text = "-"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/UpperSection/Aces/Score/btn" to="." method="_on_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/UpperSection/Twos/Score/btn" to="." method="_on_btn_pressed"]

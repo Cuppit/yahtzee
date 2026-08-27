@@ -7,6 +7,10 @@ extends ColorRect
 # --enums
 
 # --constants
+const SMALL = false
+const LARGE = true
+const THREE = false
+const FOUR = true
 
 # -- static variables
 
@@ -53,39 +57,39 @@ var categories_available:Dictionary = {
 
 # @onready variables
 # TODO 20260822: Add remaining scene nodes before adding functionality to other nodes
-@onready var btn_score_aces = $HBoxContainer/VBoxContainer/UpperSection/Aces/Score/btnScore
-@onready var lbl_score_aces = $HBoxContainer/VBoxContainer/UpperSection/Aces/Score/lblScore
-@onready var btn_score_twos = $HBoxContainer/VBoxContainer/UpperSection/Twos/Score/btnScore
-@onready var lbl_score_twos = $HBoxContainer/VBoxContainer/UpperSection/Twos/Score/lblScore
-@onready var btn_score_threes = $HBoxContainer/VBoxContainer/UpperSection/Threes/Score/btnScore
-@onready var lbl_score_threes = $HBoxContainer/VBoxContainer/UpperSection/Threes/Score/lblScore
-@onready var btn_score_fours = $HBoxContainer/VBoxContainer/UpperSection/Fours/Score/btnScore
-@onready var lbl_score_fours = $HBoxContainer/VBoxContainer/UpperSection/Fours/Score/lblScore
-@onready var btn_score_fives = $HBoxContainer/VBoxContainer/UpperSection/Fives/Score/btnFivesScore
-@onready var lbl_score_fives = $HBoxContainer/VBoxContainer/UpperSection/Fives/Score/lblFivesScore
-@onready var btn_score_sixes = $HBoxContainer/VBoxContainer/UpperSection/Sixes/Score/btnScore
-@onready var lbl_score_sixes = $HBoxContainer/VBoxContainer/UpperSection/Sixes/Score/lblScore 
+@onready var btn_score_aces = $HBoxContainer/VBoxContainer/UpperSection/Aces/Score/btn
+@onready var lbl_score_aces = $HBoxContainer/VBoxContainer/UpperSection/Aces/Score/lbl
+@onready var btn_score_twos = $HBoxContainer/VBoxContainer/UpperSection/Twos/Score/btn
+@onready var lbl_score_twos = $HBoxContainer/VBoxContainer/UpperSection/Twos/Score/lbl
+@onready var btn_score_threes = $HBoxContainer/VBoxContainer/UpperSection/Threes/Score/btn
+@onready var lbl_score_threes = $HBoxContainer/VBoxContainer/UpperSection/Threes/Score/lbl
+@onready var btn_score_fours = $HBoxContainer/VBoxContainer/UpperSection/Fours/Score/btn
+@onready var lbl_score_fours = $HBoxContainer/VBoxContainer/UpperSection/Fours/Score/lbl
+@onready var btn_score_fives = $HBoxContainer/VBoxContainer/UpperSection/Fives/Score/btn
+@onready var lbl_score_fives = $HBoxContainer/VBoxContainer/UpperSection/Fives/Score/lbl
+@onready var btn_score_sixes = $HBoxContainer/VBoxContainer/UpperSection/Sixes/Score/btn
+@onready var lbl_score_sixes = $HBoxContainer/VBoxContainer/UpperSection/Sixes/Score/lbl 
 
 @onready var lbl_score_subtotal_uppersect = $HBoxContainer/VBoxContainer/UpperSection/UpperSubtotal/Score/lbl
 @onready var lbl_score_bonus_uppersect = $HBoxContainer/VBoxContainer/UpperSection/UpperBonus/Score/lbl
 @onready var lbl_score_total_uppersect = $HBoxContainer/VBoxContainer/UpperSection/UpperTotal/Score/lbl
 
-@onready var btn_three_of_a_kind = $HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore/btnThreeOfAKind
-@onready var lbl_three_of_a_kind = $HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore/lblThreeOfAKind
-@onready var btn_four_of_a_kind = $HBoxContainer/LowerSection/FourOfAKind/Score/btnScore
-@onready var lbl_four_of_a_kind = $HBoxContainer/LowerSection/FourOfAKind/Score/lblScore
-@onready var btn_full_house = $HBoxContainer/LowerSection/FullHouse/Score/btnScore
-@onready var lbl_full_house = $HBoxContainer/LowerSection/FullHouse/Score/lblScore
-@onready var btn_small_straight = $HBoxContainer/LowerSection/SmallStraight/Score/btnScore
-@onready var lbl_small_straight = $HBoxContainer/LowerSection/SmallStraight/Score/lblScore
-@onready var btn_large_straight = $HBoxContainer/LowerSection/LargeStraight/Score/btnScore
-@onready var lbl_large_straight = $HBoxContainer/LowerSection/LargeStraight/Score/lblScore
-@onready var btn_yahtzee = $HBoxContainer/LowerSection/Yahtzee/Score/btnScore
-@onready var lbl_yahtzee = $HBoxContainer/LowerSection/Yahtzee/Score/lblScore
-@onready var btn_chance = $HBoxContainer/LowerSection/Chance/Score/btnScore
-@onready var lbl_chance =  $HBoxContainer/LowerSection/Chance/Score/lblScore
-@onready var btn_yahtzee_bonus = $HBoxContainer/LowerSection/YahtzeeBonus/Score/btnScore
-@onready var lbl_yahtzee_bonus = $HBoxContainer/LowerSection/YahtzeeBonus/Score/lblScore
+@onready var btn_three_of_a_kind = $HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore/btn
+@onready var lbl_three_of_a_kind = $HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore/lbl
+@onready var btn_four_of_a_kind = $HBoxContainer/LowerSection/FourOfAKind/Score/btn
+@onready var lbl_four_of_a_kind = $HBoxContainer/LowerSection/FourOfAKind/Score/lbl
+@onready var btn_full_house = $HBoxContainer/LowerSection/FullHouse/Score/btn
+@onready var lbl_full_house = $HBoxContainer/LowerSection/FullHouse/Score/lbl
+@onready var btn_small_straight = $HBoxContainer/LowerSection/SmallStraight/Score/btn
+@onready var lbl_small_straight = $HBoxContainer/LowerSection/SmallStraight/Score/lbl
+@onready var btn_large_straight = $HBoxContainer/LowerSection/LargeStraight/Score/btn
+@onready var lbl_large_straight = $HBoxContainer/LowerSection/LargeStraight/Score/lbl
+@onready var btn_yahtzee = $HBoxContainer/LowerSection/Yahtzee/Score/btn
+@onready var lbl_yahtzee = $HBoxContainer/LowerSection/Yahtzee/Score/lbl
+@onready var btn_chance = $HBoxContainer/LowerSection/Chance/Score/btn
+@onready var lbl_chance =  $HBoxContainer/LowerSection/Chance/Score/lbl
+@onready var btn_yahtzee_bonus = $HBoxContainer/LowerSection/YahtzeeBonus/Score/btn
+@onready var lbl_yahtzee_bonus = $HBoxContainer/LowerSection/YahtzeeBonus/Score/lbl
 
 # Part of a method to make iteration over the buttons simpler
 var score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
@@ -107,7 +111,54 @@ func is_full_house(dice_vals):
 	var to_test = uniq.values()
 	to_test.sort()
 	return to_test == [2,3]
-	
+
+
+# Checks whether the given dice values are three/four of a kind (depending on
+# setting of "three_or_four".
+# dice_vals: the values of the dice.
+# three_or_four: flag to indicate whether checking for 3 or 4 of a kind.
+func is_of_a_kind(dice_vals, three_or_four):
+	var uniq={}
+	for val in dice_vals:
+		if uniq.has(val):
+			uniq[val] += 1
+		else:
+			uniq[val] = 1
+	var to_test = uniq.values()
+	to_test.sort()
+	if three_or_four == THREE:
+		return true if to_test[-1] == 3 else false
+	elif three_or_four == FOUR:
+		return true if to_test[-1] == 4 else false
+
+# Returns whether the dice are a straight.  
+# dice_vals: list of 5 int values that are the current values of the dice.
+# sm_or_lg: boolean value indicating whether to check for a small straight
+# or a large one.
+func is_straight(dice_vals, sm_or_lg):
+	var to_return = true
+	dice_vals.sort()
+	var diffs = []
+	var x = 0
+	while x < len(dice_vals)-1:
+		diffs.append(dice_vals[x+1]-dice_vals[x])
+		x += 1
+	x=0
+	if sm_or_lg == LARGE:
+		while x < len(diffs):
+			if diffs[x] != 1:
+				to_return = false
+			x += 1
+	else:
+		# Check for 3 consecutive ones in the diffs list.
+		var ones = 0
+		while x < len (diffs):
+			if diffs[x] == 1:
+				ones += 1
+			x += 1
+		return false if ones < 3 else true
+	return to_return
+
 
 # Determines the point value of a set of dice in the specified category
 # dice_vals: the array of values of the dice
@@ -118,15 +169,23 @@ func get_score(dice_vals, cat):
 		for val in dice_vals:
 			if val == categories_available.keys().find(cat)+1:
 				score += val
-	elif cat in ["three_of_a_kind","four_of_a_kind", "chance"]:
-		for val in dice_vals:
-			score += val
+	elif cat=="three_of_a_kind":
+		if (is_of_a_kind(dice_vals, THREE) or is_of_a_kind(dice_vals, FOUR)):
+			for val in dice_vals:
+				score += val
+	elif cat=="four_of_a_kind":
+		if (is_of_a_kind(dice_vals, FOUR)):
+			for val in dice_vals:
+				score += val
 	elif cat == "full_house":
 		score = 25 if is_full_house(dice_vals) else 0	
 	elif cat == "sm_straight":
-		pass
+		score = 30 if is_straight(dice_vals, SMALL) else 0
 	elif cat == "lg_straight":
-		pass
+		score = 40 if is_straight(dice_vals, LARGE) else 0
+	elif cat == "chance":
+		for val in dice_vals:
+			score += val
 	elif cat == "yahtzee":
 		var is_a_yahtzee = true
 		for val in dice_vals:
@@ -141,17 +200,14 @@ func get_score(dice_vals, cat):
 # Decide optimal procedure (generate scores for this point in the game first,
 # THEN assign labels?  or assign the labels immediately?
 func update_options(dice_vals):
-
 	# Grab the UI buttons again, since they might have been nil when they were 
 	# grabbed at scene startup
 	score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
 			btn_score_fives,btn_score_sixes,btn_three_of_a_kind,btn_four_of_a_kind,btn_full_house,
 			btn_small_straight,btn_large_straight,btn_yahtzee,btn_chance,btn_yahtzee_bonus]
-
 	score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fours,
 			lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
 			lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
-
 	var score = 0
 	var cats = categories_available.keys()
 	for cat in range(0,len(cats)):
@@ -162,10 +218,19 @@ func update_options(dice_vals):
 					score += val
 			print("About to write to the object")
 		elif cats[cat] in ["three_of_a_kind","four_of_a_kind"]:
-			for val in dice_vals:
-				score += val
+			if (is_of_a_kind(dice_vals, THREE) or is_of_a_kind(dice_vals, FOUR)):
+				for val in dice_vals:
+					score += val
 		elif cats[cat] == "full_house":
 			score = 25 if is_full_house(dice_vals) else 0
-			
+		elif cats[cat] == "sm_straight":
+			score = 30 if is_straight(dice_vals, SMALL) else 0
+		elif cats[cat] == "lg_straight":
+			score = 40 if is_straight(dice_vals, LARGE) else 0
 		if categories_available[cats[cat]]:
 			score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
+
+
+func _on_btn_pressed():
+	print("test")
+	pass # Replace with function body.
