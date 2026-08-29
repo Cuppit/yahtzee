@@ -41,6 +41,7 @@ func _on_roll_pressed():
 	
 	
 func _on_btn_game_start_pressed():
+	print("GAME STARTED")
 	dice.roll_all()
 	score_sheet.update_options(dice.get_current_roll())
 	# Reset the score sheet

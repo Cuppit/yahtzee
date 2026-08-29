@@ -1,0 +1,11 @@
+--PREVIOUSLY--
+Couldn't figure out how to connect multiple buttons to one custom function.
+
+--TODAY--
+Figured out how to call connect() to wire them all together to one function,
+while also successfully informing the function *which* button was pressed,
+so it can process it / manipulate it accordingly.
+
+--NEXT TIME--
+Will finish the work of wiring all the buttons together to the same function,
+making scoring possible

@@ -231,6 +231,11 @@ func update_options(dice_vals):
 			score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
 
 
-func _on_btn_pressed():
+func _on_btn_pressed(pressed_btn):
+	print("button pressed: ",pressed_btn)
 	print("test")
 	pass # Replace with function body.
+
+func _ready():
+	btn_three_of_a_kind.pressed.connect(func(): _on_btn_pressed(btn_three_of_a_kind))
+	btn_four_of_a_kind.pressed.connect(func(): _on_btn_pressed(btn_four_of_a_kind))
