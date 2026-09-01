@@ -4,6 +4,7 @@ extends TextureButton
 @onready var sel_ind = $SelectionIndicator
 
 var dice_spriteframes = preload("res://assets/custom_resources/dice.tres")
+
 var selected:bool = false
 
 var value:int = 1:

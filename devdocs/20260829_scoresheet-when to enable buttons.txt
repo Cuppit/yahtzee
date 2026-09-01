@@ -1,0 +1,28 @@
+--PREVIOUSLY--
+was ready to finish scripting signal connections instead of going through
+UI; allowed connecting multiple buttons "pressed" signal to one function, 
+while also enabling passing themselves as a signal.
+
+
+--TODAY--
+Finished connecting buttons
+
+--TODO--
+Figure out how to actually store/manage the game state within the scoresheet's
+variables.
+
+Q: WHEN DO THE BUTTONS NEED TO BE DISABLED?
+A: In the _ready function. [NOTE: This doesn't work.  Need to manually disable
+   them in the Godot GUI for the scene.]
+
+Q: WHEN DO THEY NEED TO BE RE-ENABLED?
+A: In the "Game Start" function, which marks the beginning of the game
+
+Q: WHEN ARE THEY DISABLED AGAIN?
+A: When the player selects a category to score their current "hand" with the
+   dice.
+
+Q: CAN'T DISABLE THEM IN THE "_ready()" FUNCTION BECAUSE THEY DON'T EXIST
+   YET AT THAT POINT IN EXECUTION
+A: As mentioned above, the buttons are disabled by default in the Godot
+   GUI.

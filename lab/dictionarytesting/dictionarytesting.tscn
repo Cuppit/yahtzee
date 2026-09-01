@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dj1yeis33cr65"]
+
+[ext_resource type="Script" uid="uid://dcg04srgkbqtn" path="res://lab/dictionarytesting/dictionarytesting.gd" id="1_k2fdc"]
+
+[node name="Dictionarytesting" type="Node" unique_id=810607946]
+script = ExtResource("1_k2fdc")

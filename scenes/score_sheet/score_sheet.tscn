@@ -81,6 +81,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=1801745082]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Aces/Score" unique_id=122571770]
 layout_mode = 2
@@ -124,6 +125,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=1929632169]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Twos/Score" unique_id=967926282]
 layout_mode = 2
@@ -167,6 +169,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=371836186]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Threes/Score" unique_id=227657041]
 layout_mode = 2
@@ -210,6 +213,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=2019232443]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fours/Score" unique_id=995262895]
 layout_mode = 2
@@ -253,6 +257,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=858801354]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Fives/Score" unique_id=552185425]
 layout_mode = 2
@@ -296,6 +301,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=191201934]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/VBoxContainer/UpperSection/Sixes/Score" unique_id=287992446]
 layout_mode = 2
@@ -485,6 +491,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1396495007]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindScore" unique_id=1437037853]
 layout_mode = 2
@@ -528,6 +535,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=603908122]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Score" unique_id=442493455]
 layout_mode = 2
@@ -573,6 +581,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=99480190]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Score" unique_id=514232839]
 layout_mode = 2
@@ -618,6 +627,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1715680047]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Score" unique_id=1893930602]
 layout_mode = 2
@@ -663,6 +673,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1784706040]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Score" unique_id=1879776798]
 layout_mode = 2
@@ -708,6 +719,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1173662197]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Score" unique_id=1141558746]
 layout_mode = 2
@@ -751,6 +763,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=811148499]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Chance/Score" unique_id=1051971655]
 layout_mode = 2
@@ -795,6 +808,7 @@ theme_override_constants/margin_right = 10
 
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1963450152]
 layout_mode = 2
+disabled = true
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1347597137]
 layout_mode = 2
@@ -802,41 +816,41 @@ layout_mode = 2
 [node name="LowerSectionTotal" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1527171937]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1670569443]
+[node name="Title" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1670569443]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/MarginContainer" unique_id=1773570295]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/Title" unique_id=1773570295]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "L. Sect TOTAL"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1493638906]
+[node name="Desc" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1493638906]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/MarginContainer2" unique_id=725780585]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/Desc" unique_id=725780585]
 layout_mode = 2
 text = "------>"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1168032218]
+[node name="Score" type="MarginContainer" parent="HBoxContainer/LowerSection/LowerSectionTotal" unique_id=1168032218]
 custom_minimum_size = Vector2(64, -1)
 custom_maximum_size = Vector2(64, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/MarginContainer3" unique_id=398475852]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/Score" unique_id=398475852]
 layout_mode = 2
 text = "-"
 horizontal_alignment = 1
@@ -845,41 +859,41 @@ autowrap_mode = 3
 [node name="UpperSectionTotal" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=1907658846]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=2105108150]
+[node name="Title" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=2105108150]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/MarginContainer" unique_id=1199270418]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/Title" unique_id=1199270418]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "U. Sect TOTAL"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=1011381891]
+[node name="Desc" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=1011381891]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/MarginContainer2" unique_id=2078420373]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/Desc" unique_id=2078420373]
 layout_mode = 2
 text = "------>"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=971822095]
+[node name="Score" type="MarginContainer" parent="HBoxContainer/LowerSection/UpperSectionTotal" unique_id=971822095]
 custom_minimum_size = Vector2(64, -1)
 custom_maximum_size = Vector2(64, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/MarginContainer3" unique_id=1709542724]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/Score" unique_id=1709542724]
 layout_mode = 2
 text = "-"
 horizontal_alignment = 1
@@ -888,45 +902,42 @@ autowrap_mode = 3
 [node name="GrandTotal" type="HBoxContainer" parent="HBoxContainer/LowerSection" unique_id=969800611]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=307740495]
+[node name="Title" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=307740495]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/MarginContainer" unique_id=506530681]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/Title" unique_id=506530681]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "GRAND TOTAL"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=1795754855]
+[node name="Desc" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=1795754855]
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/MarginContainer2" unique_id=1996080006]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/Desc" unique_id=1996080006]
 layout_mode = 2
 text = "---->"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=1147690828]
+[node name="Score" type="MarginContainer" parent="HBoxContainer/LowerSection/GrandTotal" unique_id=1147690828]
 custom_minimum_size = Vector2(64, -1)
 custom_maximum_size = Vector2(64, -1)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/MarginContainer3" unique_id=998066419]
+[node name="lbl" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/Score" unique_id=998066419]
 layout_mode = 2
 text = "-"
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/UpperSection/Aces/Score/btn" to="." method="_on_btn_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/UpperSection/Twos/Score/btn" to="." method="_on_btn_pressed"]

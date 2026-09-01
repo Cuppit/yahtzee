@@ -38,11 +38,22 @@ func _on_roll_pressed():
 		lbl_no_rerolls_left.visible = true
 		tmr_no_rerolls_left.start()
 	
+
+# called whenever the player claims a score for a category 
+func process_cat_claim():
+	# Check if there are any more available categories
+	if true in (score_sheet.categories_available.values()):
+		print("still some categories available, beginning a new round:")
+		dice.unselect_dice()
+		dice.roll_all()
+		score_sheet.update_options(dice.get_current_roll())
+		rerolls = 2
 	
 	
 func _on_btn_game_start_pressed():
 	print("GAME STARTED")
 	dice.roll_all()
+	score_sheet.score_category_claimed.connect(func(): process_cat_claim())
 	score_sheet.update_options(dice.get_current_roll())
 	# Reset the score sheet
 	# TODO 20260823: If it becomes necessary, write a function to reset the 

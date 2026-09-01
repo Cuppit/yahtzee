@@ -1,0 +1,14 @@
+--PREVIOUSLY--
+Score is properly tracked, category buttons properly disabled when clicked
+
+--TODAY--
+Need to display current score totals
+
+...
+
+Scores mostly finished
+
+TODO:
+	-Implement Yahtzee bonus functionality
+	
+	-Figure out where to go from here (animations?  Sound effects?)

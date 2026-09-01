@@ -1,5 +1,12 @@
 extends GridContainer
 
+func unselect_dice():
+	for child in get_children():
+		if child is Die: 
+			child.selected = false
+			child.set_pressed(false)
+
+
 # Gets a list of the current values of the dice,
 # returns them as an array of integers.
 func get_current_roll():
