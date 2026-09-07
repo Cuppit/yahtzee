@@ -437,6 +437,7 @@ autowrap_mode = 3
 
 [node name="SectionSpacer" type="Button" parent="HBoxContainer" unique_id=1975719251]
 layout_mode = 2
+size_flags_horizontal = 4
 disabled = true
 
 [node name="LowerSection" type="VBoxContainer" parent="HBoxContainer" unique_id=1849325443]
@@ -473,11 +474,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/ThreeOfAKind/ThreeOfAKindDesc" unique_id=619846167]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Add Total of All Dice"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -517,11 +520,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FourOfAKind/Desc" unique_id=1185071134]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Add Total of All Dice"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -561,11 +566,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/FullHouse/Desc" unique_id=341139916]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SCORE 
 25"
 horizontal_alignment = 1
@@ -607,11 +614,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/SmallStraight/Desc" unique_id=740878902]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SCORE 
 30"
 horizontal_alignment = 1
@@ -653,11 +662,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LargeStraight/Desc" unique_id=74510381]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SCORE 
 40"
 horizontal_alignment = 1
@@ -699,11 +710,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/Yahtzee/Desc" unique_id=1218667175]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SCORE 
 50"
 horizontal_alignment = 1
@@ -744,11 +757,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lblDesc" type="Label" parent="HBoxContainer/LowerSection/Chance/Desc" unique_id=609534794]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Add Total of All Dice"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -789,11 +804,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Desc" unique_id=37492931]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "✓ FOR EACH BONUS: 100 PTS PER ✓"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -809,6 +826,7 @@ theme_override_constants/margin_right = 10
 [node name="btn" type="Button" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1963450152]
 layout_mode = 2
 disabled = true
+autowrap_mode = 1
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/YahtzeeBonus/Score" unique_id=1347597137]
 layout_mode = 2
@@ -834,11 +852,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/LowerSectionTotal/Desc" unique_id=725780585]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "------>"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -882,6 +902,7 @@ theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/UpperSectionTotal/Desc" unique_id=2078420373]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "------>"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -920,11 +941,13 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, -1)
 custom_maximum_size = Vector2(128, -1)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
 [node name="lbl" type="Label" parent="HBoxContainer/LowerSection/GrandTotal/Desc" unique_id=1996080006]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "---->"
 horizontal_alignment = 1
 autowrap_mode = 3

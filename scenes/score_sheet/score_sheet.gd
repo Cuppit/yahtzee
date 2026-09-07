@@ -271,6 +271,8 @@ func update_options(dice_vals):
 	# Update the appropriate buttons with text as necessary
 	var score = 0
 	var cats = categories_available.keys()
+	var bonus_count = 0
+	var checks = ""
 	for cat in range(0,len(cats)):
 		if (categories_available[cats[cat]]):
 			score = 0
@@ -289,37 +291,46 @@ func update_options(dice_vals):
 				score = 30 if is_straight(dice_vals, SMALL) else 0
 			elif cats[cat] == "lg_straight":
 				score = 40 if is_straight(dice_vals, LARGE) else 0
-			score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
+				
+			if cats[cat] == "yahtzee_bonus":
+				bonus_count = int(scores["yahtzee_bonus"]/100)
+				for x in range(0,bonus_count):
+					checks += "✓"
+				score_buttons[cat].text = checks
+			else:
+				score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
 	
 
 
 # Functionality for applying a score to a category, in response to the player
 # clicking on the button associated with that category.
 func _on_btn_pressed(pressed_btn):
+	
 	print("button pressed: ",pressed_btn)
-	print("test")
 	var cat = categories_available.keys()[score_buttons.find(pressed_btn)]
+	
+	# If this could have been a yahtzee, but the box was already claimed for 50 points:
+	if (get_score(last_dice_vals, "yahtzee") == 50) and (scores["yahtzee"]==50):
+		scores["yahtzee_bonus"] += 100
+			
 	# Mark appropriate category as "unavailable"
 	categories_available[cat] = false
-	#print([1, 2, 3].reduce(func(accum, number): return accum + number, 10))
 	
 	# Godot equivalent of calling sum on an array of ints?
-	scores[cat] = get_score(last_dice_vals, cat)
+	#print([1, 2, 3].reduce(func(accum, number): return accum + number, 10))
+
+	scores[cat] = get_score(last_dice_vals, cat)	
 	score_category_claimed.emit()
 	
 	# Update the totals displayed on the score sheet since they may have 
 	# changed
 	update_score_totals()
 	
-	
-	
 	pass # Replace with function body.
 
 
 func _ready():
 	# Connecting all buttons to the "_on_btn_pressed" method
-	btn_three_of_a_kind.pressed.connect(func(): _on_btn_pressed(btn_three_of_a_kind))
-	btn_four_of_a_kind.pressed.connect(func(): _on_btn_pressed(btn_four_of_a_kind))
 	btn_score_aces.pressed.connect(func(): _on_btn_pressed(btn_score_aces))
 	btn_score_twos.pressed.connect(func(): _on_btn_pressed(btn_score_twos))
 	btn_score_threes.pressed.connect(func(): _on_btn_pressed(btn_score_threes))

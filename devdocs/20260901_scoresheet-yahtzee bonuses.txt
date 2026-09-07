@@ -1,0 +1,7 @@
+--PREVIOUSLY--
+More final touches on score tracking & button disabling when picking a 
+category
+
+--TODAY--
+Yesterday, it became apparent Yahtzee Bonuses don't work exactly the way one
+might think (e.g. Joker rules).  Research on the proper way to approach it is warranted.

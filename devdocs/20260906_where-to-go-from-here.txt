@@ -1,0 +1,87 @@
+--PREVIOUSLY--
+Tweaked some bits of UI, still haven't solved the Joker rule / 
+bonus Yahtzee problem
+
+--TODAY--
+
+Finish the Joker / Bonus rules implementations
+
+FIRST: DESCRIBE THE BONUS
+
+
+[Courtesy of the World Yahtzee Institute: 
+ https://www.yahtzeemanifesto.com/blog/yahtzee-bonus-rules.php]
+------------------
+The Yahtzee Bonus Rule
+A Yahtzee Bonus Chip
+
+One extra Yahtzee = 100 bonus points!
+
+Put an (X) in the Yahtzee bonus box AND fill in one of your empty boxes on the 
+score card as follows:
+
+    -Score the total of the 5 dice in the appropriate Upper Section box.
+    -If that box is full, fill the 3 or 4 kind or 4 or 6 of a kind boxes in the 
+	 Lower Section with your 5 dice total.
+	
+    -If they too are full, use your Chance or score any one of the combos with 
+	 your 5 dice total.
+	
+	-If you've already scored zero in your Yahtzee box, you can't get a Yahtzee 
+	 Bonus of 100 points. Just follow the standard Yahtzee scoring as detailed 
+	 above in steps 1-3.
+
+Let's dive deep into the two key rules you need to know when blessed by a second
+Yahtzee: the Yahtzee Bonus and the Joker Rule. These rules, which govern one of 
+the most misunderstood scoring situations in board games, unlock a strategic 
+layer to Yahtzee, allowing you to maximize your score when those elusive rolls 
+become reality. 
+
+
+Yahtzee Bonus
+
+Rolling a second Yahtzee (five-of-a-kind) earns you a sweet bonus of 100 points 
+on top of the standard Yahtzee score (50 points). This bonus keeps accumulating 
+throughout the game, adding 100 points to your total score for each subsequent 
+Yahtzee you roll.
+
+The Yahtzee Bonus is a rewarding system that incentivizes players to 
+consistently chase those coveted five-of-a-kind rolls. With a bit of strategy 
+and a lot of luck, it's possible to accumulate multiple Yahtzee Bonuses in a 
+single game, potentially leading to stratospheric scores that leave your 
+opponents in awe.
+
+To score a multiple Yahtzee game, just check the Yahtzee Bonus box on your score
+card for each extra Yahtzee. In some versions of the game, you also collect a 
+poker chip to indicate a Yahtzee Bonus.
+
+
+
+Joker Rules
+
+You must score the the total of the five dice in the appropriate Upper 
+Section box. If this box has already been filled, then you score it in an open 
+Lower Section box. Three- and Four-of-a-Kind receive next priority and must be 
+scored here if open. Otherwise score as Chance or treat it as a wild card, or 
+Joker, and score the regular points value for Full House, Small Straight or 
+Large Straight.
+
+The rules are not obvious or intuitive so reliance on the official rules book 
+is essential for new players. Unfortunately the publisher has been inconsistent 
+with the Yahtzee Bonus Rules and even the official documents have changed over 
+the years.
+------------------
+
+IMPLEMENTATION 
+
+TODO: Modify the scoring function so that a check is made to determine 
+whether a Bonus Yahtzee has been merited.
+
+-------------------
+
+partially done, next to do:
+	-Check whether the appropriate upper-section score box *is even available*
+	 in the case of a bonus yahtzee.  if NOT, *THEN* offer lower section
+	 categories as an option for the yahtzee.
+	
+	(In either case, the player still mertis a Bonus Yahtzee)

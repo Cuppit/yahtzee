@@ -29,9 +29,10 @@ func debug_set_dice(to_set):
 				else:
 					child.value = 2
 	elif to_set == "yahtzee":
+		var randval = randi_range(1,6)
 		for child in get_children():
 			if child is Die:
-				child.value=6
+				child.value=randval
 	
 
 # Identifies which dice are currently pressed (indicating they're "selected"),

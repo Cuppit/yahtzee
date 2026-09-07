@@ -97,6 +97,7 @@ dice will be
 re-rolled"
 
 [node name="btnDebugSetFullHouse" type="Button" parent="." unique_id=1352130837]
+visible = false
 layout_mode = 0
 offset_left = 82.0
 offset_top = 53.0
@@ -105,8 +106,28 @@ offset_bottom = 84.0
 theme = ExtResource("4_3o8ta")
 text = "[DEBUG] Set dice to Full House"
 
+[node name="lblTurnsRemaining" type="Label" parent="." unique_id=209139054]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 16.0
+offset_right = 195.0
+offset_bottom = 39.0
+text = "TURNS REMAINING: 
+CURRENT TURN: "
+
+[node name="btnDebugSetYahtzee" type="Button" parent="." unique_id=2027388968]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 19.0
+offset_right = 373.0
+offset_bottom = 96.0
+text = "[DEBUG] Set dice to
+Yahtzee of random
+value"
+
 [connection signal="pressed" from="btnRoll" to="." method="_on_roll_pressed"]
 [connection signal="pressed" from="btnGameStart" to="." method="_on_btn_game_start_pressed"]
 [connection signal="timeout" from="tmrNoDiceSelectedMsgTimeout" to="." method="_on_tmr_no_dice_selected_msg_timeout_timeout"]
 [connection signal="timeout" from="tmrNoRerollsLeft" to="." method="_on_tmr_no_rerolls_left_timeout"]
 [connection signal="pressed" from="btnDebugSetFullHouse" to="." method="_on_btn_debug_set_full_house_pressed"]
+[connection signal="pressed" from="btnDebugSetYahtzee" to="." method="_on_btn_debug_set_yahtzee_pressed"]
