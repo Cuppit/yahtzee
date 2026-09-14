@@ -116,6 +116,7 @@ text = "TURNS REMAINING:
 CURRENT TURN: "
 
 [node name="btnDebugSetYahtzee" type="Button" parent="." unique_id=2027388968]
+visible = false
 layout_mode = 0
 offset_left = 215.0
 offset_top = 19.0

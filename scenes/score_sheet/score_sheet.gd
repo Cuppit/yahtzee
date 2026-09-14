@@ -108,7 +108,20 @@ var score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fou
 		lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
 
 
+func is_yahtzee(dice_vals):
+	var is_a_yahtzee = true
+	for val in dice_vals:
+		if val != dice_vals[0]:
+			is_a_yahtzee = false	
+	return is_a_yahtzee
+
+
 func is_full_house(dice_vals):
+	# First, determine if it's a bonus yahtzee, and provide the score according
+	# to joker rules
+	if (is_yahtzee(dice_vals) and scores["yahtzee"] == 50):
+		return true
+	# Then, test if it's a full house like normal
 	var uniq = {}
 	for val in dice_vals: 
 		if uniq.has(val):
@@ -134,15 +147,20 @@ func is_of_a_kind(dice_vals, three_or_four):
 	var to_test = uniq.values()
 	to_test.sort()
 	if three_or_four == THREE:
-		return true if to_test[-1] == 3 else false
+		return true if to_test[-1] >= 3 else false
 	elif three_or_four == FOUR:
-		return true if to_test[-1] == 4 else false
+		return true if to_test[-1] >= 4 else false
 
 # Returns whether the dice are a straight.  
 # dice_vals: list of 5 int values that are the current values of the dice.
 # sm_or_lg: boolean value indicating whether to check for a small straight
 # or a large one.
 func is_straight(dice_vals, sm_or_lg):
+	# First, determine if it's a bonus yahtzee, and provide the score according
+	# to joker rules
+	if (is_yahtzee(dice_vals) and scores["yahtzee"] == 50):
+		return true
+	# Then, proceed to score as normal
 	var to_return = true
 	dice_vals.sort()
 	var diffs = []
@@ -194,11 +212,7 @@ func get_score(dice_vals, cat):
 		for val in dice_vals:
 			score += val
 	elif cat == "yahtzee":
-		var is_a_yahtzee = true
-		for val in dice_vals:
-			if val != dice_vals[0]:
-				is_a_yahtzee = false
-		score = 50 if is_a_yahtzee else 0
+		score = 50 if is_yahtzee(dice_vals) else 0
 
 	return score
 
@@ -298,6 +312,7 @@ func update_options(dice_vals):
 					checks += "✓"
 				score_buttons[cat].text = checks
 			else:
+				# What do you do now?
 				score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
 	
 
@@ -311,7 +326,7 @@ func _on_btn_pressed(pressed_btn):
 	
 	# If this could have been a yahtzee, but the box was already claimed for 50 points:
 	if (get_score(last_dice_vals, "yahtzee") == 50) and (scores["yahtzee"]==50):
-		scores["yahtzee_bonus"] += 100
+		scores["yahtzee_bonus"] += 100 # Give the player a bonus 
 			
 	# Mark appropriate category as "unavailable"
 	categories_available[cat] = false
