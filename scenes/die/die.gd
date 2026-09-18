@@ -1,7 +1,16 @@
 class_name Die
 extends TextureButton
 
+@onready var die_roll_snd_1 = $DieRoll1
+@onready var die_roll_snd_2 = $DieRoll2
+@onready var die_roll_snd_3 = $DieRoll3
+@onready var die_roll_snd_4 = $DieRoll4
+@onready var die_roll_snd_5 = $DieRoll5
+@onready var die_roll_snd_6 = $DieRoll6
+
 @onready var sel_ind = $SelectionIndicator
+
+var dieroll_sounds = []
 
 var dice_spriteframes = preload("res://assets/custom_resources/dice.tres")
 
@@ -15,6 +24,8 @@ var value:int = 1:
 # Rolls the die
 func roll():
 	value = randi_range(1, 6) 
+	dieroll_sounds = [die_roll_snd_1,die_roll_snd_2,die_roll_snd_3,die_roll_snd_4,die_roll_snd_5,die_roll_snd_6]
+	dieroll_sounds[randi_range(0,5)].play()
 
 func _on_pressed():
 	pass

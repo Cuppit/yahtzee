@@ -1,0 +1,23 @@
+---MAKING THE GAME ASTHETICALLY CLEAN AND ACTUALLY FUN TO PLAY---
+
+The unique thing about a *VIDEO* game is that it's an VISUAL experience. 
+People aren't going to want to play it unless it *ENGAGES THE SENSES*.  
+
+Doing this well (visual arts) is a discipline all of it's own apart from the 
+mere software design.  But for the sake of reps and sets, let's look at one
+change that can be made
+
+ASTHETICS OF ROLLING THE DICE
+	-Over a 3rd of a second, spin sprite 
+	-...(to be continued)
+	
+...
+
+SOUNDS
+
+Sound-effects were added to die roll.
+
+NEXT TIME: Produce BGM music track (kind of like the BGM for the SNES game
+"Side Pocket", smooth jazz)
+
+ALSO NEXT TIME: Actually get the sprites to spin
