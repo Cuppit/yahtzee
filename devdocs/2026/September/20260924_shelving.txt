@@ -1,0 +1,7 @@
+It may be time to shelve this project for now; some valuable lessons were
+learned, such as how to use tweening, managing UIs, and whether to handle
+initialization of variables at _ready() or _init().  
+
+But a few more closing polish items need to be performed; mess with "game
+ending / game restart" sequence, which will have to wait until another day
+because work bled into two hours trying to "finish up" the project to shelve

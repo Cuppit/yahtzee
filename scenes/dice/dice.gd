@@ -1,5 +1,8 @@
 extends GridContainer
 
+const IN = true
+const OUT = false
+
 func unselect_dice():
 	for child in get_children():
 		if child is Die: 
@@ -68,3 +71,19 @@ func roll_all():
 	for child in get_children():
 		if child is Die:
 			child.roll()
+
+
+# Fade the dice into the screen.
+# in_or_out = true: fades INTO visibility.
+# in_or_out = false: fades OUT of visibility.
+func fade(in_or_out=IN):
+	if in_or_out == true:
+		modulate = Color.TRANSPARENT
+		visible = true
+		var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
+		tween.tween_property(self, "modulate", Color(1,1,1,1), 1)
+	else:
+		modulate = Color(1,1,1,1)
+		visible=true
+		var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
+		tween.tween_property(self, "modulate", Color.TRANSPARENT, 1)

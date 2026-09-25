@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8v2c77gyhlnq" path="res://scenes/dice/dice.tscn" id="2_4hxb2"]
 [ext_resource type="PackedScene" uid="uid://dgsd1dk4wvb6x" path="res://scenes/score_sheet/score_sheet.tscn" id="3_4hxb2"]
 [ext_resource type="Theme" uid="uid://b3kq74llqlv3x" path="res://assets/themes/minimal/MinimalUI.tres" id="4_3o8ta"]
+[ext_resource type="AudioStream" uid="uid://djsyd0ngb3ixh" path="res://assets/music/Airport-Lounge.mp3" id="5_i4aiw"]
 
 [node name="GameScreen" type="Control" unique_id=2050456348]
 layout_mode = 3
@@ -33,10 +34,8 @@ text = "Roll!"
 
 [node name="ScoreSheet" parent="." unique_id=1401567757 instance=ExtResource("3_4hxb2")]
 layout_mode = 1
-offset_left = 400.0
-offset_top = -4.0
-offset_right = 1150.0
-offset_bottom = -4.0
+offset_left = 402.0
+offset_right = 1152.0
 
 [node name="lblRerollMeter" type="Label" parent="." unique_id=1239326114]
 visible = false
@@ -126,9 +125,41 @@ text = "[DEBUG] Set dice to
 Yahtzee of random
 value"
 
+[node name="aspAirportLounge" type="AudioStreamPlayer" parent="." unique_id=549053009]
+stream = ExtResource("5_i4aiw")
+volume_db = -6.068
+parameters/looping = true
+
+[node name="lblEndGameMsg" type="Label" parent="." unique_id=173256073]
+visible = false
+layout_mode = 0
+offset_left = 836.0
+offset_top = 43.0
+offset_right = 1125.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 36
+text = "Congratulations!
+
+Your final score
+was:
+
+"
+horizontal_alignment = 1
+
+[node name="btnPlayAgain" type="Button" parent="." unique_id=228675658]
+visible = false
+layout_mode = 0
+offset_left = 874.0
+offset_top = 473.0
+offset_right = 1101.0
+offset_bottom = 531.0
+theme_override_font_sizes/font_size = 36
+text = "PLAY AGAIN!"
+
 [connection signal="pressed" from="btnRoll" to="." method="_on_roll_pressed"]
 [connection signal="pressed" from="btnGameStart" to="." method="_on_btn_game_start_pressed"]
 [connection signal="timeout" from="tmrNoDiceSelectedMsgTimeout" to="." method="_on_tmr_no_dice_selected_msg_timeout_timeout"]
 [connection signal="timeout" from="tmrNoRerollsLeft" to="." method="_on_tmr_no_rerolls_left_timeout"]
 [connection signal="pressed" from="btnDebugSetFullHouse" to="." method="_on_btn_debug_set_full_house_pressed"]
 [connection signal="pressed" from="btnDebugSetYahtzee" to="." method="_on_btn_debug_set_yahtzee_pressed"]
+[connection signal="pressed" from="btnPlayAgain" to="." method="_on_btn_play_again_pressed"]

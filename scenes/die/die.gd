@@ -16,6 +16,10 @@ var dice_spriteframes = preload("res://assets/custom_resources/dice.tres")
 
 var selected:bool = false
 
+var random = RandomNumberGenerator.new()
+
+var direction = 1
+
 var value:int = 1:
 	set(val):
 		value = clamp(val,1,6)
@@ -23,9 +27,13 @@ var value:int = 1:
 		
 # Rolls the die
 func roll():
-	value = randi_range(1, 6) 
-	dieroll_sounds = [die_roll_snd_1,die_roll_snd_2,die_roll_snd_3,die_roll_snd_4,die_roll_snd_5,die_roll_snd_6]
-	dieroll_sounds[randi_range(0,5)].play()
+	value = random.randi_range(1, 6) 
+	dieroll_sounds[random.randi_range(0,5)].play()
+	direction = 1 if random.randi_range(0,1)==1 else -1
+	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(self, "rotation", PI*4*(direction), .7)
+	#tween.tween_property(self, "rotation", PI*8, .7)
+	rotation=0
 
 func _on_pressed():
 	pass
@@ -44,3 +52,10 @@ func _on_toggled(toggled_on):
 		selected = false
 	
 	print("Die is set to selected?:",selected)
+
+func _init():
+	pass
+
+
+func _ready():
+	dieroll_sounds = [die_roll_snd_1,die_roll_snd_2,die_roll_snd_3,die_roll_snd_4,die_roll_snd_5,die_roll_snd_6]

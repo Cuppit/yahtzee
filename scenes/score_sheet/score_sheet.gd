@@ -175,13 +175,36 @@ func is_straight(dice_vals, sm_or_lg):
 				to_return = false
 			x += 1
 	else:
+		
+		'''
 		# Check for 3 consecutive ones in the diffs list.
-		var ones = 0
+		var max_consecutive_ones = 0
+		var current_ones = 0
 		while x < len (diffs):
 			if diffs[x] == 1:
-				ones += 1
+				current_ones += 1
+				max_consecutive_ones = max(max_consecutive_ones, current_ones)
+			else:
+				current_ones = 0
 			x += 1
-		return false if ones < 3 else true
+		return false if max_consecutive_ones < 3 else true
+		'''
+		# Check for 4 consecutive distinct numbers
+		var unique_dice = []
+		for val in dice_vals:
+			if val not in unique_dice:
+				unique_dice.append(val)
+		unique_dice.sort()
+		
+		var found_small_straight = false
+		for i in range(len(unique_dice) - 3):
+			if (unique_dice[i+1] == unique_dice[i] + 1 and 
+				unique_dice[i+2] == unique_dice[i] + 2 and 
+				unique_dice[i+3] == unique_dice[i] + 3):
+				found_small_straight = true
+				break
+		return found_small_straight
+		
 	return to_return
 
 
@@ -219,7 +242,6 @@ func get_score(dice_vals, cat):
 
 # Updates the 
 func update_score_totals():
-	# TODO 20260831: Finish updating score totals
 	var uppersect_subtot = 0
 	var uppersect_bonus = 0
 	var lowersect_subtot = 0
@@ -247,14 +269,26 @@ func update_score_totals():
 	pass
 
 
+func get_grand_total():
+	var uppersect_subtot = 0
+	var uppersect_bonus = 0
+	var lowersect_subtot = 0
+	for cat in scores:
+		print("adding ",cat," to subtotal:")
+		if cat in ["aces","twos","threes","fours","fives","sixes"]:
+			uppersect_subtot += scores[cat]
+		
+		if cat in ["three_of_a_kind","four_of_a_kind","full_house","sm_straight","lg_straight","yahtzee","chance","yahtzee_bonus"]:
+			lowersect_subtot += scores[cat]
+
+	uppersect_bonus = 35 if uppersect_subtot >= 63 else 0
+	
+	return uppersect_subtot + uppersect_bonus + lowersect_subtot
+
+
 # Checks
 func enable_buttons_by_availability():
-	score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
-			btn_score_fives,btn_score_sixes,btn_three_of_a_kind,btn_four_of_a_kind,btn_full_house,
-			btn_small_straight,btn_large_straight,btn_yahtzee,btn_chance,btn_yahtzee_bonus]
-	score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fours,
-			lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
-			lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
+
 			
 	var catkeys = categories_available.keys()
 	for cat in range (0, len(catkeys)):
@@ -270,14 +304,7 @@ func update_options(dice_vals):
 	# Store this "hand" of dice for subsequent use by the scoring buttons
 	last_dice_vals = dice_vals
 	
-	# Grab the UI buttons again, since they might have been nil when they were 
-	# grabbed at scene startup
-	score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
-			btn_score_fives,btn_score_sixes,btn_three_of_a_kind,btn_four_of_a_kind,btn_full_house,
-			btn_small_straight,btn_large_straight,btn_yahtzee,btn_chance,btn_yahtzee_bonus]
-	score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fours,
-			lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
-			lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]
+
 	
 	# Check for available categories, and enable score buttons accordingly
 	enable_buttons_by_availability()
@@ -315,6 +342,17 @@ func update_options(dice_vals):
 				# What do you do now?
 				score_buttons[cat].text = str(get_score(dice_vals, cats[cat]))
 	
+
+# Resets the entire scoresheet
+func reset_scoresheet():
+	for cat in scores:
+		scores[cat] = 0
+	for cat in categories_available:
+		categories_available[cat] = true
+		
+	update_score_totals()
+	enable_buttons_by_availability()
+	pass
 
 
 # Functionality for applying a score to a category, in response to the player
@@ -359,3 +397,12 @@ func _ready():
 	btn_large_straight.pressed.connect(func(): _on_btn_pressed(btn_large_straight))
 	btn_yahtzee.pressed.connect(func(): _on_btn_pressed(btn_yahtzee))
 	btn_chance.pressed.connect(func(): _on_btn_pressed(btn_chance))
+	
+	# Grab the UI buttons, since they were nil when they were 
+	# grabbed at scene startup
+	score_buttons = [btn_score_aces,btn_score_twos,btn_score_threes,btn_score_fours,
+			btn_score_fives,btn_score_sixes,btn_three_of_a_kind,btn_four_of_a_kind,btn_full_house,
+			btn_small_straight,btn_large_straight,btn_yahtzee,btn_chance,btn_yahtzee_bonus]
+	score_labels = [lbl_score_aces,lbl_score_twos,lbl_score_threes,lbl_score_fours,
+			lbl_score_fives,lbl_score_sixes,lbl_three_of_a_kind,lbl_four_of_a_kind,lbl_full_house,
+			lbl_small_straight,lbl_large_straight,lbl_yahtzee,lbl_chance,lbl_yahtzee_bonus]

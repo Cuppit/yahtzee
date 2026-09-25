@@ -13,6 +13,7 @@
 [node name="Die" type="TextureButton" unique_id=949753758]
 offset_right = 40.0
 offset_bottom = 40.0
+pivot_offset = Vector2(32, 32)
 toggle_mode = true
 texture_normal = ExtResource("1_vq5di")
 script = ExtResource("2_11crt")

@@ -12,6 +12,12 @@ extends Control
 @onready var tmr_no_rerolls_left = $tmrNoRerollsLeft
 @onready var lbl_keep_dice = $lblKeepDice
 @onready var lbl_turns_remaining = $lblTurnsRemaining
+@onready var asp_airport_lounge = $aspAirportLounge
+
+@onready var lbl_end_game_msg = $lblEndGameMsg
+@onready var btn_play_again = $btnPlayAgain
+
+var scoresheet_original_pos
 
 var rerolls:int = 2:
 	set(val):
@@ -35,10 +41,44 @@ var turns_remaining:int = 13:
 func start_next_turn(first_turn=false):
 	turns_remaining -= 1
 	#turns_remaining = turns_remaining if first_turn else (turns_remaining-1)
+	if turns_remaining < 0:
+		end_game()
+
 	rerolls = 2
 	dice.unselect_dice()
 	dice.roll_all()
 	score_sheet.update_options(dice.get_current_roll())
+	
+
+
+func end_game():
+	btn_roll.visible = false
+	lbl_reroll_meter.visible = false
+	lbl_turns_remaining.visible = false
+	lbl_keep_dice.visible = false
+	dice.fade(false) # Or "fade OUT"
+	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
+	#tween.set_parallel()
+	# Center-of-screen position formula: score_sheet.position.x-((get_viewport().get_visible_rect().size.x-score_sheet.size.x)/2)
+	tween.tween_property(score_sheet, "position", Vector2(0,score_sheet.position.y), 3.5)
+	
+	lbl_end_game_msg.text = "Congratulations!\n  Your final score\n was:\n"+str(score_sheet.get_grand_total())
+	
+	tween.set_trans(Tween.TRANS_CUBIC)
+	lbl_end_game_msg.modulate = Color.TRANSPARENT
+	lbl_end_game_msg.visible = true
+	tween.tween_property(lbl_end_game_msg, "modulate", Color(1,1,1,1),2)
+	btn_play_again.modulate = Color.TRANSPARENT
+	btn_play_again.visible = true
+	tween.tween_property(btn_play_again, "modulate", Color(1,1,1,1),2)
+	
+	
+	
+	
+	#tween.tween_property($Sprite, "scale", Vector2(), 1.0)
+	#tween.tween_callback($Sprite.queue_free)
+	
+	
 
 
 func _on_roll_pressed():
@@ -68,21 +108,34 @@ func process_cat_claim():
 		print("still some categories available, beginning a new round:")
 		start_next_turn()
 	
+# Resets the game
+func reset_game():
+	lbl_end_game_msg.visible = false
+	btn_play_again.visible = false
 	
+	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(score_sheet, "position", scoresheet_original_pos, 2.5)
+	score_sheet.reset_scoresheet()
+	turns_remaining = 13
+
+
+func _ready():
+	scoresheet_original_pos = score_sheet.position
+	print("The scoresheet_original_pos value is: ",str(scoresheet_original_pos))
+
+
 func _on_btn_game_start_pressed():
 	print("GAME STARTED")
 	score_sheet.score_category_claimed.connect(func(): process_cat_claim())
 	start_next_turn(true)
-	# Reset the score sheet
-	# TODO 20260823: If it becomes necessary, write a function to reset the 
-	# initial state of the score sheet.
 	
 	# Display the relevant UI components
-	dice.visible = true
+	dice.fade()
 	btn_roll.visible = true
 	lbl_reroll_meter.visible = true
 	lbl_keep_dice.visible = true
 	btn_game_start.visible=false
+	asp_airport_lounge.play()
 
 
 func _on_tmr_no_dice_selected_msg_timeout_timeout():
@@ -101,3 +154,7 @@ func _on_btn_debug_set_full_house_pressed():
 func _on_btn_debug_set_yahtzee_pressed():
 	dice.debug_set_dice("yahtzee")
 	score_sheet.update_options(dice.get_current_roll())
+
+
+func _on_btn_play_again_pressed():
+	reset_game()
