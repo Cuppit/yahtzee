@@ -60,7 +60,7 @@ func end_game():
 	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
 	#tween.set_parallel()
 	# Center-of-screen position formula: score_sheet.position.x-((get_viewport().get_visible_rect().size.x-score_sheet.size.x)/2)
-	tween.tween_property(score_sheet, "position", Vector2(0,score_sheet.position.y), 3.5)
+	tween.tween_property(score_sheet, "position", Vector2(0,score_sheet.position.y), 2.5)
 	
 	lbl_end_game_msg.text = "Congratulations!\n  Your final score\n was:\n"+str(score_sheet.get_grand_total())
 	
@@ -68,9 +68,9 @@ func end_game():
 	lbl_end_game_msg.modulate = Color.TRANSPARENT
 	lbl_end_game_msg.visible = true
 	tween.tween_property(lbl_end_game_msg, "modulate", Color(1,1,1,1),2)
-	btn_play_again.modulate = Color.TRANSPARENT
+	# btn_play_again.modulate = Color.TRANSPARENT
 	btn_play_again.visible = true
-	tween.tween_property(btn_play_again, "modulate", Color(1,1,1,1),2)
+	tween.tween_property(btn_play_again, "position", Vector2(btn_play_again.position.x-312,btn_play_again.position.y),0.5)
 	
 	
 	
@@ -112,11 +112,21 @@ func process_cat_claim():
 func reset_game():
 	lbl_end_game_msg.visible = false
 	btn_play_again.visible = false
+	btn_play_again.position.x += 312
 	
 	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
-	tween.tween_property(score_sheet, "position", scoresheet_original_pos, 2.5)
+	tween.tween_property(score_sheet, "position", scoresheet_original_pos, 0.5)
 	score_sheet.reset_scoresheet()
+	
 	turns_remaining = 13
+	dice.fade()
+	start_next_turn(true)
+		
+	btn_roll.visible = true
+	lbl_reroll_meter.visible = true
+	lbl_keep_dice.visible = true
+	btn_game_start.visible=false
+	lbl_turns_remaining.visible = true
 
 
 func _ready():

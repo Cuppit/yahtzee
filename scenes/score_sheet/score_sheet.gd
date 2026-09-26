@@ -288,11 +288,12 @@ func get_grand_total():
 
 # Checks
 func enable_buttons_by_availability():
-
 			
 	var catkeys = categories_available.keys()
 	for cat in range (0, len(catkeys)):
 		score_buttons[cat].disabled = false if categories_available[catkeys[cat]] else true
+	score_buttons[catkeys.find("yahtzee_bonus")].disabled = true # The Yahtzee bonus button should NEVER 
+	#be clickable
 
 
 # Updates score values portrayed on the 
@@ -303,9 +304,7 @@ func update_options(dice_vals):
 	
 	# Store this "hand" of dice for subsequent use by the scoring buttons
 	last_dice_vals = dice_vals
-	
 
-	
 	# Check for available categories, and enable score buttons accordingly
 	enable_buttons_by_availability()
 	

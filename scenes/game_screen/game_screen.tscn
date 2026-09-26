@@ -147,12 +147,11 @@ was:
 horizontal_alignment = 1
 
 [node name="btnPlayAgain" type="Button" parent="." unique_id=228675658]
-visible = false
 layout_mode = 0
-offset_left = 874.0
-offset_top = 473.0
-offset_right = 1101.0
-offset_bottom = 531.0
+offset_left = 1189.0
+offset_top = 468.0
+offset_right = 1416.0
+offset_bottom = 526.0
 theme_override_font_sizes/font_size = 36
 text = "PLAY AGAIN!"
 

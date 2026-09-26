@@ -1,0 +1,5 @@
+A full gameplay loop has been implemented.  This can be considered finished
+for now.
+
+There's tons of polish that could go into it (e.g. sound effects and 
+A mascot reacting to certain scores)
