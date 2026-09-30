@@ -135,6 +135,8 @@ func _ready():
 
 
 func _on_btn_game_start_pressed():
+	dice.rerandomize_dice()
+	dice.report_randomizers()
 	print("GAME STARTED")
 	score_sheet.score_category_claimed.connect(func(): process_cat_claim())
 	start_next_turn(true)

@@ -87,3 +87,15 @@ func fade(in_or_out=IN):
 		visible=true
 		var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_LINEAR)
 		tween.tween_property(self, "modulate", Color.TRANSPARENT, 1)
+		
+		
+func rerandomize_dice():
+	for child in get_children():
+		if child is Die:
+			child.rerandomize()
+
+
+# Prints randomizer data to the console for each die object
+func report_randomizers():
+	for child in get_children():
+		print("Randomizer data for die ",str(child),": ",str(child.random))

@@ -1,0 +1,4 @@
+Fixed a bug with the HTML5 export where every die would (~90% of the time) all
+have exactly the same value.  As a workaround, a Global "pool" of numbers that
+gets generated periodically was generated, and THAT is where random numbers are
+pulled from instead.

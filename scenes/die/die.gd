@@ -16,7 +16,7 @@ var dice_spriteframes = preload("res://assets/custom_resources/dice.tres")
 
 var selected:bool = false
 
-var random = RandomNumberGenerator.new()
+var random = Global.random
 
 var direction = 1
 
@@ -27,13 +27,18 @@ var value:int = 1:
 		
 # Rolls the die
 func roll():
-	value = random.randi_range(1, 6) 
+	value = Global.get_custom_rand_num_1_thru_6()
 	dieroll_sounds[random.randi_range(0,5)].play()
 	direction = 1 if random.randi_range(0,1)==1 else -1
 	var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
 	tween.tween_property(self, "rotation", PI*4*(direction), .7)
 	#tween.tween_property(self, "rotation", PI*8, .7)
 	rotation=0
+
+# An attempt at troubleshooting a random number generator issue
+func rerandomize():
+	pass
+
 
 func _on_pressed():
 	pass
@@ -54,8 +59,10 @@ func _on_toggled(toggled_on):
 	print("Die is set to selected?:",selected)
 
 func _init():
+	random.randomize()
 	pass
 
 
 func _ready():
+	random.randomize()
 	dieroll_sounds = [die_roll_snd_1,die_roll_snd_2,die_roll_snd_3,die_roll_snd_4,die_roll_snd_5,die_roll_snd_6]
